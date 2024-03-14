@@ -1,8 +1,6 @@
 package ua.automation.hw4.value;
 
-
 public class BaseValue {
-
     protected String listXpath;
     protected String detailsXpath;
     protected String message;

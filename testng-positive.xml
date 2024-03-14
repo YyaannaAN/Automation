@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Positive" verbose="1" >
+    <test name="Only positive tests">
+        <groups>
+            <run>
+                <include name="positive" />
+            </run>
+        </groups>
+
+        <classes>
+            <class name="ua.automation.hw4.GeneralTest"/>
+            <class name="ua.automation.hw4.SearchDetailsTest"/>
+        </classes>
+    </test>
+</suite>
