@@ -4,6 +4,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -18,6 +20,7 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--window-size=1280,720");
         options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
         options.addArguments("--incognito");
 
         webDriver = new ChromeDriver(options);
