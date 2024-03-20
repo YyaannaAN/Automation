@@ -25,7 +25,6 @@ public class BaseTest {
     @BeforeMethod
     public void initDriver()
     {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--window-size=1280,720");
         options.addArguments("--no-sandbox");
