@@ -21,6 +21,7 @@ public class BaseTest {
         options.addArguments("--window-size=1280,720");
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
+        options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--incognito");
 
         webDriver = new ChromeDriver(options);
