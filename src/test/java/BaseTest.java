@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -7,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
@@ -14,9 +16,15 @@ import java.time.Duration;
 public class BaseTest {
     public WebDriver webDriver;
 
+    @BeforeClass
+    static void setupAll() {
+        WebDriverManager.chromedriver().setup();
+    }
+
     @BeforeMethod
     public void initDriver()
     {
+
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--window-size=1280,720");
         options.addArguments("--no-sandbox");
