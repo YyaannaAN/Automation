@@ -2,6 +2,9 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+src/main/java/ua/automation/experiment1/
+src/main/java/ua/automation/hw2/
+allure-results/
 
 ### IntelliJ IDEA ###
 .idea/uiDesigner.xml
